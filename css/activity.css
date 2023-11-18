@@ -5,7 +5,9 @@ html, body {
     font-family: Arial, sans-serif;
     text-align: center;
     width: 100%;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Set a minimum height to cover the entire viewport height */
 }
 
 /* Style the h1 and h2 headers */
@@ -39,6 +41,7 @@ footer {
     color: #fff;
     padding: 10px;
     text-align: center;
+    margin-top: auto; /* Push the footer to the bottom */
 }
 
 footer a {
@@ -73,6 +76,14 @@ li.navitem a:hover {
     color: black;
 }
 
+/* Set the container to full height */
+.page {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; /* Stack child elements vertically */
+    align-items: center; /* Center content vertically */
+}
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -105,6 +116,28 @@ blockquote {
     font-style: italic;
 }
 
+.activity-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.activity-card img {
+    width: 100%;
+    height: auto;
+}
+
+.activity-description {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+
 /* Media queries for responsiveness */
 
 /* Portrait phones (up to 576px) */
@@ -132,18 +165,61 @@ blockquote {
 
 /* Tablets (768px) and up */
 @media (min-width: 768px) {
-    /* Add tablet-specific styles here */
-    
-    
+    h1 {
+        font-size: 26px; /* Adjust font size for tablets */
+    }
+    h2 {
+        font-size: 20px; /* Adjust font size for tablets */
+    }
+    img {
+        width: 200px; /* Adjust image width for tablets */
+    }
+    video {
+        width: 200px; /* Adjust video width for tablets */
+    }
+    .quote-box {
+        width: 70%; /* Adjust quote box width for tablets */
+        font-size: 48px; /* Adjust font size for tablets */
+    }
 }
 
 /* Laptops (992px) and up */
 @media (min-width: 992px) {
-    /* Add laptop-specific styles here */
+    h1 {
+        font-size: 28px; /* Adjust font size for laptops */
+    }
+    h2 {
+        font-size: 22px; /* Adjust font size for laptops */
+    }
+    img {
+        width: 250px; /* Adjust image width for laptops */
+    }
+    video {
+        width: 250px; /* Adjust video width for laptops */
+    }
+    .quote-box {
+        width: 60%; /* Adjust quote box width for laptops */
+        font-size: 54px; /* Adjust font size for laptops */
+    }
 }
 
 /* Large devices (1200px) and up */
 @media (min-width: 1200px) {
-    /* Add large device-specific styles here */
-    
+    h1 {
+        font-size: 30px; /* Adjust font size for large devices */
+    }
+    h2 {
+        font-size: 24px; /* Adjust font size for large devices */
+    }
+    img {
+        width: 300px; /* Adjust image width for large devices */
+    }
+    video {
+        width: 300px; /* Adjust video width for large devices */
+    }
+    .quote-box {
+        width: 50%; /* Adjust quote box width for large devices */
+        font-size: 60px; /* Adjust font size for large devices */
+    }
 }
+
